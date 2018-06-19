@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>n*n 乘法表</title>
+</head>
+
+<body >
+    <script type="text/javascript">
+        function chengfabiao(){
+            var n = document.getElementById("zhi").value;
+            if (n > 0 && n < 10) {
+                document.write("<table style='border-collapse: collapse;'>");
+                for (var i = 1; i <= n; i++) {
+                    document.write('<tr>');
+                    for (var j = 1; j <= n; j++){
+                        document.write('<td style="border:#CC0000 1px solid;width:1em;height:1em;">'+i*j+'</td>'); 
+                    }
+                    document.write('</tr>');
+                }
+                document.write('</table>');
+            } 
+            else alert("请输入1-9之间的数字！")
+        }
+    </script>
+
+    <input type="text" id="zhi" placeholder="请输入数字1-9">
+    <input type="button" value="确认" onclick="chengfabiao()">
+</body>
+</html>
